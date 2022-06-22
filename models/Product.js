@@ -1,3 +1,6 @@
+// slugify
+const slugify = require("slugify");
+
 module.exports = (sequelize, Model, DataTypes) => {
   class Product extends Model {}
 
@@ -19,7 +22,7 @@ module.exports = (sequelize, Model, DataTypes) => {
         type: DataTypes.BOOLEAN,
       },
       price: {
-        type: DataTypes.DECIMAL,
+        type: DataTypes.DECIMAL(10, 2),
         allowNull: false,
       },
       description: {
@@ -37,6 +40,28 @@ module.exports = (sequelize, Model, DataTypes) => {
     {
       sequelize,
       modelName: "product",
+      hooks: {
+        beforeBulkCreate: async (products, options) => {
+          for (const product of products) {
+            product.slug = await slugify(product.name, {
+              replacement: "-",
+              lower: true,
+            });
+          }
+        },
+        beforeCreate: async (product, options) => {
+          product.slug = await slugify(product.name, {
+            replacement: "-",
+            lower: true,
+          });
+        },
+        beforeUpdate: async (product, options) => {
+          product.slug = await slugify(product.name, {
+            replacement: "-",
+            lower: true,
+          });
+        },
+      },
     }
   );
 

@@ -12,7 +12,6 @@ module.exports = async () => {
       price: 10.2,
       description: "lorem ipsum etc",
       stock: 5,
-      slug: "ejemplo",
       categoryId: 1,
     },
     {
@@ -23,7 +22,6 @@ module.exports = async () => {
       price: 7.2,
       description: "lorem ipsum etc",
       stock: 15,
-      slug: "ejemplo",
       categoryId: 1,
     },
     {
@@ -34,11 +32,10 @@ module.exports = async () => {
       price: 4.2,
       description: "lorem ipsum etc",
       stock: 10,
-      slug: "ejemplo",
-      categoryId: 1,
+      categoryId: 2,
     }
   );
-
+  console.log(products[0].name);
   await Product.bulkCreate(products);
   console.log("[Database] Se corrió el seeder de Products.");
 };

@@ -21,6 +21,7 @@ const Admin = require("./Admin")(sequelize, Model, DataTypes);
 const Category = require("./Category")(sequelize, Model, DataTypes);
 const Product = require("./Product")(sequelize, Model, DataTypes);
 const Order = require("./Order")(sequelize, Model, DataTypes);
+const Order_Product = require("./Order_Product")(sequelize, Model, DataTypes);
 
 // Luego de definir los modelos, se pueden establecer relaciones
 // entre los mismos...IMPORTANTE
@@ -30,8 +31,8 @@ Product.belongsTo(Category);
 User.hasMany(Order);
 Order.belongsTo(User);
 
-Order.hasMany(Product);
-Product.hasMany(Order);
+Order.belongsToMany(Product, { through: Order_Product });
+Product.belongsToMany(Order, { through: Order_Product });
 
 module.exports = {
   sequelize,
@@ -40,4 +41,5 @@ module.exports = {
   Category,
   Product,
   Order,
+  Order_Product,
 };
