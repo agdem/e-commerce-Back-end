@@ -9,7 +9,7 @@ const publicController = require("../controllers/publicController");
 
 // publicRouter.get("/login-register");
 publicRouter.post("/login");
-publicRouter.post("/register");
+publicRouter.post("/register", publicController.register);
 
 // route home
 publicRouter.get("/", publicController.homeView);

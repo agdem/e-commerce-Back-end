@@ -7,7 +7,7 @@ module.exports = async () => {
     {
       name: "Arabica Coffee",
       image:
-        "https://cdn.discordapp.com/attachments/834507024796614656/989522609244893244/brazilian-coffee.png",
+        "https://st.kofio.co/img_product/EC71GPY3S28pKOg/8840/7WgZxq28PeHk0fiIstvw_102215.png",
       featured: true,
       price: 10.2,
       description:
@@ -29,7 +29,7 @@ module.exports = async () => {
     {
       name: "Black Tea",
       image:
-        "https://cdn.discordapp.com/attachments/834507024796614656/989517022050275328/earl-grey-tea.jpg",
+        "https://sinfonia.com.uy/wp-content/uploads/2016/10/Earl-Grey-Selection-Lata-con-Ingredientes-Te-Negro-Sinfonia.jpg",
       featured: true,
       price: 5.2,
       description:
@@ -40,7 +40,7 @@ module.exports = async () => {
     {
       name: "Green Tea",
       image:
-        "https://cdn.discordapp.com/attachments/834507024796614656/989517401060163604/green-jaipur-tea.jpg",
+        "https://sinfonia.com.uy/wp-content/uploads/2020/04/Jaipur-Composicion-Te-Verde-Sinfonia-1-1024x1024.jpg",
       featured: true,
       price: 3.2,
       description:
@@ -51,7 +51,7 @@ module.exports = async () => {
     {
       name: "FrischSchoggi",
       image:
-        "https://cdn.discordapp.com/attachments/834507024796614656/989520014904270859/hazelnut-milk-chocolate.png",
+        "https://laderach.com/media/catalog/product/cache/0138abb1cd045ea962ef7970969ed197/1/0/10004708_02_1.jpg",
       featured: true,
       price: 11.2,
       description:
@@ -62,7 +62,7 @@ module.exports = async () => {
     {
       name: "Läderach truffles",
       image:
-        "https://cdn.discordapp.com/attachments/834507024796614656/989520337559506995/pralines-and-truffles.png",
+        "https://laderach.com/media/catalog/product/cache/0138abb1cd045ea962ef7970969ed197/1/0/10097017_T_S.png",
       featured: true,
       price: 14.2,
       description:

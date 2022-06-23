@@ -1,4 +1,4 @@
-const { Product } = require("../models");
+const { Product, User } = require("../models");
 
 const publicController = {
   homeView: async (req, res) => {
@@ -14,6 +14,18 @@ const publicController = {
   productView: async (req, res) => {
     const product = await Product.findOne({ where: { slug: req.params.slug } });
     res.json(product);
+  },
+  register: async (req, res) => {
+    const newUser = await User.create({
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email,
+      phone: req.body.phone,
+      address: req.body.address,
+      password: req.body.password,
+    });
+    const allUsers = await User.findAll();
+    res.json(allUsers);
   },
 };
 
