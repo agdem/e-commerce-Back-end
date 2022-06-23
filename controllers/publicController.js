@@ -16,16 +16,22 @@ const publicController = {
     res.json(product);
   },
   register: async (req, res) => {
-    const newUser = await User.create({
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      email: req.body.email,
-      phone: req.body.phone,
-      address: req.body.address,
-      password: req.body.password,
-    });
-    const allUsers = await User.findAll();
-    res.json(allUsers);
+    const user = await User.findOne({ where: { email: req.body.email } });
+
+    if (user) {
+      res.json("usuario ya existe");
+    } else {
+      const newUser = await User.create({
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        phone: req.body.phone,
+        address: req.body.address,
+        password: req.body.password,
+      });
+      const allUsers = await User.findAll();
+      res.json(allUsers);
+    }
   },
 };
 
