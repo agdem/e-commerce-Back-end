@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const { Product, User } = require("../models");
+const { Product, User, Category } = require("../models");
 const jwt = require("jsonwebtoken");
 const keys = require("../keys");
 const bcrypt = require("bcryptjs");
@@ -15,7 +15,9 @@ const publicController = {
   categoryView: async (req, res) => {
     const categoryProducts = await Product.findAll({
       where: { categoryId: req.params.id },
+      include: Category,
     });
+
     res.json(categoryProducts);
   },
   productView: async (req, res) => {
