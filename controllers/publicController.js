@@ -23,21 +23,26 @@ const publicController = {
     res.json(product);
   },
   register: async (req, res) => {
-    const user = await User.findOne({ where: { email: req.body.email } });
-
-    if (user) {
-      res.json("usuario ya existe");
-    } else {
-      const newUser = await User.create({
+    const [user, created] = await User.findOrCreate({
+      where: { email: req.body.email },
+      defaults: {
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         email: req.body.email,
         phone: req.body.phone,
         address: req.body.address,
         password: req.body.password,
-      });
-      const allUsers = await User.findAll();
-      res.json(allUsers);
+      },
+    });
+    if (created) {
+      const payload = {
+        check: true,
+      };
+      const token = jwt.sign(payload, app.get("key"));
+
+      res.json({ id: user.id, firstName: user.firstName, token: token });
+    } else {
+      res.json(created);
     }
   },
   login: async (req, res) => {
@@ -52,14 +57,15 @@ const publicController = {
         };
         const token = jwt.sign(payload, app.get("key"));
         res.json({
-          message: "autenticacion exitosa",
+          id: user.id,
+          firstName: user.firstName,
           token: token,
         });
       } else {
-        res.json("usuario y/o contrasena incorrecta");
+        res.json("error");
       }
     } else {
-      res.json("usuario y/o contrasena incorrecta");
+      res.json("error");
     }
   },
 };
