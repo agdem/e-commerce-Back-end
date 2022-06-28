@@ -5,8 +5,9 @@ module.exports = async () => {
 
   orders.push({
     status: "delivered",
-    total_USD: 300,
+    total: 300,
     userId: 1,
+    product: [{ name: "Black Tea", price: 80, quantity: 5 }],
   });
 
   await Order.bulkCreate(orders);

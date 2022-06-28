@@ -42,7 +42,15 @@ const publicController = {
       };
       const token = jwt.sign(payload, app.get("key"));
 
-      res.json({ id: user.id, firstName: user.firstName, token: token });
+      res.json({
+        id: user.id,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        email: user.email,
+        phone: user.phone,
+        address: user.address,
+        token: token,
+      });
     } else {
       res.json(created);
     }
@@ -61,6 +69,10 @@ const publicController = {
         res.json({
           id: user.id,
           firstName: user.firstName,
+          lastName: user.lastName,
+          email: user.email,
+          phone: user.phone,
+          address: user.address,
           token: token,
         });
       } else {
