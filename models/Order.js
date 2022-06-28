@@ -10,13 +10,18 @@ module.exports = (sequelize, Model, DataTypes) => {
       },
       status: {
         type: DataTypes.STRING,
+        defaultValue: "Order confirmed",
       },
       payment_method: {
         type: DataTypes.STRING,
         defaultValue: "Credit Card",
       },
-      total_USD: {
+      total: {
         type: DataTypes.BIGINT,
+        allowNull: false,
+      },
+      product: {
+        type: DataTypes.JSON,
       },
     },
     {

@@ -1,4 +1,11 @@
-const { Order, Product, Category, Admin } = require("../models");
+const {
+  Order,
+  Product,
+  Category,
+  Admin,
+  User,
+  Order_Product,
+} = require("../models");
 
 const privateController = {
   adminView: async (req, res) => {
@@ -61,6 +68,14 @@ const privateController = {
     const deletedAdmin = await Admin.destroy({ where: { id: req.params.id } });
     const allAdmins = await Admin.findAll();
     res.json(allAdmins);
+  },
+  createOrder: async (req, res) => {
+    const newOrder = await Order.create({
+      total: req.body.total,
+      product: req.body.product,
+      userId: req.body.userId,
+    });
+    res.json(newOrder);
   },
 };
 
