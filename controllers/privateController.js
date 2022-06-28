@@ -8,15 +8,34 @@ const privateController = {
     res.json(orders);
   },
   adminProductsView: async (req, res) => {
-    const products = await Product.findAll({ order: [["categoryId", "DESC"]] });
+    const products = await Product.findAll({
+      order: [["categoryId", "DESC"]],
+      include: Category,
+    });
     res.json(products);
   },
   adminDeleteProduct: async (req, res) => {
     const deletedProduct = await Product.destroy({
       where: { id: req.params.id },
     });
-    const allProducts = await Product.findAll();
+    const allProducts = await Product.findAll({
+      order: [["categoryId", "DESC"]],
+      include: Category,
+    });
     res.json(allProducts);
+  },
+  adminCreateProduct: async (req, res) => {
+    const createProduct = await Product.create({
+      name: req.body.name,
+      image: req.body.image,
+      featured: req.body.featured,
+      price: req.body.price,
+      description: req.body.description,
+      stock: req.body.stock,
+      // slug: req.body.slug,
+      categoryId: req.body.category,
+    });
+    res.json(createProduct);
   },
   adminCategoriesView: async (req, res) => {
     const categories = await Category.findAll();

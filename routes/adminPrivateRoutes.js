@@ -9,7 +9,10 @@ adminPrivateRouter.get("/logout");
 
 // CRUD productos
 adminPrivateRouter.get("/products", privateController.adminProductsView);
-adminPrivateRouter.post("/create-product");
+adminPrivateRouter.post(
+  "/create-product",
+  privateController.adminCreateProduct
+);
 adminPrivateRouter.delete(
   "/delete-product/:id",
   privateController.adminDeleteProduct
