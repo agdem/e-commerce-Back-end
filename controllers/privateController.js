@@ -42,8 +42,38 @@ const privateController = {
       // slug: req.body.slug,
       categoryId: req.body.category,
     });
+    console.log(createProduct);
     res.json(createProduct);
   },
+  adminEditProduct: async (req, res) => {
+    const editProduct = await Product.update(
+      {
+        id: req.params.id,
+        name: req.body.name,
+        image: req.body.image,
+        featured: req.body.featured,
+        price: req.body.price,
+        description: req.body.description,
+        stock: req.body.stock,
+        // slug: req.body.slug,
+        categoryId: req.body.category,
+      },
+
+      {
+        where: {
+          id: req.params.id,
+        },
+        returning: true,
+      }
+    );
+    const allProducts = await Product.findAll({
+      order: [["categoryId", "DESC"]],
+      include: Category,
+    });
+    console.log(editProduct);
+    res.json(allProducts);
+  },
+
   adminCategoriesView: async (req, res) => {
     const categories = await Category.findAll();
     res.json(categories);

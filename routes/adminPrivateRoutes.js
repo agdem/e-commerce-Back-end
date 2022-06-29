@@ -17,7 +17,10 @@ adminPrivateRouter.delete(
   "/delete-product/:id",
   privateController.adminDeleteProduct
 );
-adminPrivateRouter.patch("/update-product/:id");
+adminPrivateRouter.patch(
+  "/update-product/:id",
+  privateController.adminEditProduct
+);
 
 // CRUD categories
 adminPrivateRouter.get("/categories", privateController.adminCategoriesView);
