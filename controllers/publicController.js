@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const { Product, User, Category } = require("../models");
+const { Product, User, Category, Admin } = require("../models");
 const jwt = require("jsonwebtoken");
 const keys = require("../keys");
 const bcrypt = require("bcryptjs");
@@ -73,6 +73,29 @@ const publicController = {
           email: user.email,
           phone: user.phone,
           address: user.address,
+          token: token,
+        });
+      } else {
+        res.json("error");
+      }
+    } else {
+      res.json("error");
+    }
+  },
+  loginAdmin: async (req, res) => {
+    const admin = await Admin.findOne({
+      where: { email: req.body.email },
+    });
+    if (admin) {
+      const compare = await bcrypt.compare(req.body.password, admin.password);
+      if (compare) {
+        const payload = {
+          check: true,
+        };
+        const token = jwt.sign(payload, app.get("key"));
+        res.json({
+          id: admin.id,
+          firstName: admin.firstName,
           token: token,
         });
       } else {

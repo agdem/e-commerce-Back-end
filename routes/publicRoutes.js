@@ -21,7 +21,6 @@ publicRouter.get("/:id", publicController.categoryView);
 publicRouter.get("/product/:slug", publicController.productView);
 
 // routes admin
-publicRouter.get("/login-admin");
-publicRouter.post("/login-admin");
+publicRouter.post("/login-admin", publicController.loginAdmin);
 
 module.exports = publicRouter;

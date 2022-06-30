@@ -5,7 +5,6 @@ const privateController = require("../controllers/privateController");
 
 // Rutas del Admin:
 adminPrivateRouter.get("/", privateController.adminView);
-adminPrivateRouter.get("/logout");
 
 // CRUD productos
 adminPrivateRouter.get("/products", privateController.adminProductsView);
