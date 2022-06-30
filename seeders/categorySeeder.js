@@ -5,13 +5,13 @@ module.exports = async () => {
 
   categories.push(
     {
-      name: "coffee",
+      name: "Coffee",
     },
     {
-      name: "tea",
+      name: "Tea",
     },
     {
-      name: "sweets",
+      name: "Sweets",
     }
   );
 
