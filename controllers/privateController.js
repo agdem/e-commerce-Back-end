@@ -58,6 +58,12 @@ const privateController = {
     });
     res.json(newOrder);
   },
+  userOrders: async (req, res) => {
+    const userOrders = await Order.findAll({
+      where: { userId: req.params.id },
+    });
+    res.json(userOrders);
+  },
 };
 
 module.exports = privateController;

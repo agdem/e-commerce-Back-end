@@ -8,6 +8,9 @@ const privateController = require("../controllers/privateController");
 // logout user
 userPrivateRouter.get("/logout");
 
+// user orders
+userPrivateRouter.get("/orders/:id", privateController.userOrders);
+
 // checkout POST este post genera orden en la base de datos
 userPrivateRouter.post("/checkout", privateController.createOrder);
 

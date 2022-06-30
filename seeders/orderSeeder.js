@@ -5,7 +5,7 @@ module.exports = async () => {
 
   orders.push({
     status: "delivered",
-    total: 300,
+    total: 400,
     userId: 1,
     product: [{ name: "Black Tea", price: 80, quantity: 5 }],
   });

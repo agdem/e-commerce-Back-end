@@ -17,7 +17,7 @@ module.exports = (sequelize, Model, DataTypes) => {
         defaultValue: "Credit Card",
       },
       total: {
-        type: DataTypes.BIGINT,
+        type: DataTypes.DECIMAL(10, 2),
         allowNull: false,
       },
       product: {
