@@ -92,7 +92,7 @@ const publicController = {
         const payload = {
           check: true,
         };
-        const token = jwt.sign(payload, app.get("key"));
+        const token = jwt.sign(payload, process.env.JWT_SECRET);
         res.json({
           id: admin.id,
           firstName: admin.firstName,

@@ -45,4 +45,7 @@ adminPrivateRouter.patch("/update-admin/:id", privateController.editAdmin);
 //orders
 adminPrivateRouter.get("/orders", privateController.adminViewOrder);
 
+// users
+adminPrivateRouter.get("/users", privateController.allUsers);
+
 module.exports = adminPrivateRouter;

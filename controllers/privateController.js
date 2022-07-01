@@ -161,6 +161,10 @@ const privateController = {
     });
     res.json(userOrders);
   },
+  allUsers: async (req, res) => {
+    const users = await User.findAll();
+    res.json(users);
+  },
 };
 
 module.exports = privateController;
