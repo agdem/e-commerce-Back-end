@@ -105,6 +105,39 @@ module.exports = async () => {
       categoryId: 1,
     },
     {
+      name: "Specialty coffee Mitte DR Congo KATANA",
+      image:
+        "https://st.kofio.co/img_product/rRwsYjp90ucdB7n/8945/PXKt1iUyRodx2JngrOSs_100885.png",
+      featured: false,
+      price: 18.5,
+      description:
+        "Cafe Mitte (which means centre in german) was located in a historical building that was built in 1659 on Panska street no. 11, right in the centre of Brno. When we were trying to come up with a name for our Hostel and Cafe, the name Mitte was an obvious choice.",
+      stock: 14,
+      categoryId: 1,
+    },
+    {
+      name: "Kmen Coffee Roasters Burundi YANDARO",
+      image:
+        "https://st.kofio.co/img_product/YXQEU4u1AGjfnwJ/8534/sq_600_YqrVMes5ywgKFmE3Zc90_109439.png",
+      featured: false,
+      price: 17.5,
+      description:
+        "Sweet, juicy and fragrant, but always different. We do not believe in absolute truths and we respect that everyone can enjoy something different. We are looking for the sustainability of coffee, not only as a raw material, but the whole way that the bean goes into the cup, and all those who are involved. Our coffee strain unites people who feel the same way.",
+      stock: 12,
+      categoryId: 1,
+    },
+    {
+      name: "Nordbeans Colombia TUMBAGA - decaffeinated",
+      image:
+        "https://st.kofio.co/img_product/6oTz9ULGdmM0DrF/7434/sq_600_khEIGHbNKqsw9VoWUMe8_3.png",
+      featured: false,
+      price: 24.3,
+      description:
+        "Speciality Coffee Roasters from the North of Czech Republic.We know that coffee isn't just about your daily caffeine intake. We also know that it goes a long way before it gets to our cups. From the planting of the seedling to handpicking of ripe fruit, washing, peeling, meticulous drying, and finally packing into jute bags so that the beans can head on their way across the ocean into Europe.",
+      stock: 21,
+      categoryId: 1,
+    },
+    {
       name: "Black Tea",
       image:
         "https://sinfonia.com.uy/wp-content/uploads/2016/10/Earl-Grey-Selection-Lata-con-Ingredientes-Te-Negro-Sinfonia.jpg",
@@ -204,6 +237,39 @@ module.exports = async () => {
       categoryId: 2,
     },
     {
+      name: "Chinese smoked black",
+      image:
+        "https://sinfonia.com.uy/wp-content/uploads/2018/11/Leyenda-Rusa-Lata-con-Ingredientes-Te-Negro-Sinfonia.jpg",
+      featured: false,
+      price: 38.5,
+      description:
+        "Chinese smoked black tea Lapsang Souchong. Its intense flavor makes it a unique ingredient for gastronomy.",
+      stock: 15,
+      categoryId: 2,
+    },
+    {
+      name: "Organic green tea",
+      image:
+        "https://sinfonia.com.uy/wp-content/uploads/2020/08/Jazmin-de-Luna-Lata-con-Ingredientes-Te-Verde-Sinfonia.jpg",
+      featured: false,
+      price: 43.5,
+      description:
+        "Organic green tea with jasmine petals, grown in high-end gardens in China. A millenary blend with delicate floral perfume and subtly sweet notes. Its properties make it an excellent antioxidant.",
+      stock: 8,
+      categoryId: 2,
+    },
+    {
+      name: "Relaxing pack",
+      image:
+        "https://sinfonia.com.uy/wp-content/uploads/2020/04/T%C3%A9-Sinfon%C3%ADa-M%C3%B3nica-Devoto_Pack-Relax-01.jpg",
+      featured: false,
+      price: 43.5,
+      description:
+        "A pack to relax and feel good. Two of our favorite herbal teas to promote calm and relaxation of body and mind.  As they do not contain theine, both infusions are suitable for pregnant women. Includes infuser spoon, a can of Ikebana and a tube of Caramel Clouds.",
+      stock: 8,
+      categoryId: 2,
+    },
+    {
       name: "FrischSchoggi",
       image:
         "https://laderach.com/media/catalog/product/cache/0138abb1cd045ea962ef7970969ed197/1/0/10004708_02_1.jpg",
@@ -299,6 +365,39 @@ module.exports = async () => {
       price: 11.9,
       description:
         "A delicious selection of 4 exquisite truffles for an unforgettable taste experience. The box contains the following truffles (without alcohol): Truffle Milk, Truffle White, Truffle Caramel, Truffle Dark. (0.20 lbs)",
+      stock: 35,
+      categoryId: 3,
+    },
+    {
+      name: "FrischSchoggi™ Heart Hazelnut Milk",
+      image:
+        "https://laderach.com/media/catalog/product/cache/0138abb1cd045ea962ef7970969ed197/1/0/10004783_T_S_1.jpg",
+      featured: false,
+      price: 13.5,
+      description:
+        "A 200g silky smooth milk chocolate heart studded with whole, roasted and caramelised hazelnuts would make a wonderful gift of appreciation. Läderach chocolate is freshly made in Switzerland from bean to finished product. Enjoy within 2-3 weeks of receipt. (0.44 lbs)",
+      stock: 19,
+      categoryId: 3,
+    },
+    {
+      name: "FrischSchoggi™ Cranberry Milk",
+      image:
+        "https://laderach.com/media/catalog/product/cache/0138abb1cd045ea962ef7970969ed197/1/0/10004744_FrischSchoggi_Cranberry_Milch_f.jpg",
+      featured: false,
+      price: 21.3,
+      description:
+        "In this FrischSchoggi™, fresh milk chocolate and whole dried cranberries are combined to create a fruity and tart chocolate delight. This gourmet Swiss chocolate, made by Läderach chocolatier suisse, is produced at the highest quality using our chocolatier’s traditional craftsmanship. The FrischSchoggi™ is available in a quarter, half or as a whole chocolate slab. To best experience the aroma of the fresh chocolate, break and enjoy within 2-3 weeks.",
+      stock: 17,
+      categoryId: 3,
+    },
+    {
+      name: "Pavés Grand Cru 8 pcs per box",
+      image:
+        "https://laderach.com/media/catalog/product/cache/0138abb1cd045ea962ef7970969ed197/1/0/10072293_01_1.jpg",
+      featured: false,
+      price: 11.9,
+      description:
+        "The Pavés Grand Cru are a creamy smooth, single-origin dark chocolate from Trinidad and almond gianduja cube topped with cocoa powder. For the ultimate chocolate lover, these Läderach chocolates are a can't-miss experience. (0.14 lbs)",
       stock: 35,
       categoryId: 3,
     }
