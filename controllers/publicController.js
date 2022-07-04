@@ -9,7 +9,9 @@ app.set("key", keys.key);
 
 const publicController = {
   homeView: async (req, res) => {
-    const featuredProducts = await Product.findAll({ where: { featured: 1 } });
+    const featuredProducts = await Product.findAll({
+      where: { featured: true },
+    });
     res.json(featuredProducts);
   },
   categoryView: async (req, res) => {
