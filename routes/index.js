@@ -4,8 +4,8 @@ const userPrivateRoutes = require("./userPrivateRoutes");
 const productRoutes = require("./productRoute");
 
 module.exports = (app) => {
+  app.use(publicRoutes);
   app.use("/user", userPrivateRoutes);
   app.use("/admin", adminPrivateRoutes);
-  app.use("/products", productRoutes);
-  app.use(publicRoutes);
+  // app.use("/products", productRoutes);
 };
