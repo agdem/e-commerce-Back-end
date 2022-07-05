@@ -1,3 +1,6 @@
+const formidable = require("formidable");
+const { from } = require("formidable/src/parsers/Dummy");
+
 const {
   Order,
   Product,
@@ -31,7 +34,18 @@ const privateController = {
     });
     res.json(allProducts);
   },
-  adminCreateProduct: async (req, res) => {
+  adminCreateProduct: async (req, res, next) => {
+    const form = formidable({ multiples: true });
+
+    form.parse(req, (err, fields, files) => {
+      if (err) {
+        next(err);
+        return;
+      }
+      const productImage = res.json({ fields, files });
+      console.log(productImage);
+    });
+
     const createProduct = await Product.create({
       name: req.body.name,
       image: req.body.image,
