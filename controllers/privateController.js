@@ -1,5 +1,13 @@
+const { createClient } = require("@supabase/supabase-js");
+const fs = require("fs");
+const path = require("path");
 const formidable = require("formidable");
 const { from } = require("formidable/src/parsers/Dummy");
+
+const supabase = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_KEY
+);
 
 const {
   Order,
@@ -35,29 +43,32 @@ const privateController = {
     res.json(allProducts);
   },
   adminCreateProduct: async (req, res, next) => {
-    const form = formidable({ multiples: true });
-
-    form.parse(req, (err, fields, files) => {
-      if (err) {
-        next(err);
-        return;
-      }
-      const productImage = res.json({ fields, files });
-      console.log(productImage);
+    const form = formidable({ multiples: true, keepExtensions: true });
+    // console.log("form");
+    // console.log(form);
+    form.parse(req, async (err, fields, files) => {
+      console.log(files);
+      const ext = path.extname(files.image.filepath);
+      const newFileName = `image_${Date.now()}${ext}`;
+      const { data, error } = await supabase.storage
+        .from("product-images")
+        .upload(newFileName, fs.createReadStream(files.image.filepath), {
+          cacheControl: "3600",
+          upsert: false,
+          contentType: files.image.mimetype,
+        });
+      console.log(data);
+      const createProduct = await Product.create({
+        name: fields.name,
+        image: data.Key,
+        featured: fields.featured,
+        price: fields.price,
+        description: fields.description,
+        stock: fields.stock,
+        slug: fields.slug,
+        categoryId: fields.categoryId,
+      });
     });
-
-    const createProduct = await Product.create({
-      name: req.body.name,
-      image: req.body.image,
-      featured: req.body.featured,
-      price: req.body.price,
-      description: req.body.description,
-      stock: req.body.stock,
-      // slug: req.body.slug,
-      categoryId: req.body.category,
-    });
-    console.log(createProduct);
-    res.json(createProduct);
   },
   adminEditProduct: async (req, res) => {
     const editProduct = await Product.update(
