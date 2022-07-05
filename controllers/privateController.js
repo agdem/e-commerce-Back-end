@@ -68,6 +68,7 @@ const privateController = {
         slug: fields.slug,
         categoryId: fields.categoryId,
       });
+      res.json(createProduct);
     });
   },
   adminEditProduct: async (req, res) => {
