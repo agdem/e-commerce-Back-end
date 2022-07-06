@@ -3,6 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const formidable = require("formidable");
 const { from } = require("formidable/src/parsers/Dummy");
+const dbInitialSetup = require("../dbInitialSetup");
 
 const supabase = createClient(
   process.env.SUPABASE_URL,
@@ -190,6 +191,10 @@ const privateController = {
   allUsers: async (req, res) => {
     const users = await User.findAll();
     res.json(users);
+  },
+  resetDB: async (req, res) => {
+    dbInitialSetup();
+    res.json("OK");
   },
 };
 
