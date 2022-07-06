@@ -3,6 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const formidable = require("formidable");
 const { from } = require("formidable/src/parsers/Dummy");
+const db = require("../models");
 
 const supabase = createClient(
   process.env.SUPABASE_URL,
@@ -190,6 +191,17 @@ const privateController = {
   allUsers: async (req, res) => {
     const users = await User.findAll();
     res.json(users);
+  },
+  resetDB: async (req, res) => {
+    await db.sequelize.sync({ force: true });
+    await require("../seeders/userSeeder")();
+    await require("../seeders/adminSeeder")();
+    await require("../seeders/categorySeeder")();
+    await require("../seeders/productSeeder")();
+    await require("../seeders/orderSeeder")();
+    await require("../seeders/order_productSeeder")();
+
+    res.json("OK");
   },
 };
 

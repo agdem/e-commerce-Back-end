@@ -48,4 +48,7 @@ adminPrivateRouter.get("/orders", privateController.adminViewOrder);
 // users
 adminPrivateRouter.get("/users", privateController.allUsers);
 
+// reset database
+adminPrivateRouter.get("/reset", privateController.resetDB);
+
 module.exports = adminPrivateRouter;
