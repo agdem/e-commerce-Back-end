@@ -58,7 +58,7 @@ const privateController = {
           upsert: false,
           contentType: files.image.mimetype,
         });
-      console.log(data);
+      // console.log(data);
       const createProduct = await Product.create({
         name: fields.name,
         image: data.Key,
@@ -73,32 +73,49 @@ const privateController = {
     });
   },
   adminEditProduct: async (req, res) => {
-    const editProduct = await Product.update(
-      {
-        id: req.params.id,
-        name: req.body.name,
-        image: req.body.image,
-        featured: req.body.featured,
-        price: req.body.price,
-        description: req.body.description,
-        stock: req.body.stock,
-        // slug: req.body.slug,
-        // categoryId: req.body.category,
-      },
-
-      {
-        where: {
+    const form = formidable({ multiples: true, keepExtensions: true });
+    // console.log("form");
+    // console.log(form);
+    form.parse(req, async (err, fields, files) => {
+      console.log(files);
+      const ext = path.extname(files.image.filepath);
+      const newFileName = `image_${Date.now()}${ext}`;
+      const { data, error } = await supabase.storage
+        .from("product-images")
+        .upload(newFileName, fs.createReadStream(files.image.filepath), {
+          cacheControl: "3600",
+          upsert: false,
+          contentType: files.image.mimetype,
+        });
+      const editProduct = await Product.update(
+        {
           id: req.params.id,
+          name: fields.name,
+          image: data.Key,
+          featured: fields.featured,
+          price: fields.price,
+          description: fields.description,
+          stock: fields.stock,
+          slug: fields.slug,
+          categoryId: fields.categoryId,
+          // slug: req.body.slug,
+          // categoryId: req.body.category,
         },
-        returning: true,
-      }
-    );
-    const allProducts = await Product.findAll({
-      order: [["categoryId", "DESC"]],
-      include: Category,
+
+        {
+          where: {
+            id: req.params.id,
+          },
+          returning: true,
+        }
+      );
+      const allProducts = await Product.findAll({
+        order: [["categoryId", "DESC"]],
+        include: Category,
+      });
+      console.log(editProduct);
+      res.json(allProducts);
     });
-    console.log(editProduct);
-    res.json(allProducts);
   },
 
   adminCategoriesView: async (req, res) => {
