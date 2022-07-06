@@ -247,7 +247,7 @@ module.exports = async () => {
     },
     {
       name: "FrischSchoggi",
-      image: "product-images/3-1_laderach_truffles.webp",
+      image: "product-images/3-12_hazelnut.webp",
       featured: false,
       price: 50.5,
       description:
@@ -257,7 +257,7 @@ module.exports = async () => {
     },
     {
       name: "Läderach truffles",
-      image: "product-images/3-2_frischschoggi_boat.webp",
+      image: "product-images/3-1_laderach_truffles.webp",
       featured: false,
       price: 75.2,
       description:
