@@ -317,7 +317,7 @@ module.exports = async () => {
     },
     {
       name: "FrischSchoggi™ pouch small",
-      image: "product-images/3-7_frischschoggi_pouch_small.webpg",
+      image: "product-images/3-7_frischschoggi_pouch_small.webp",
       featured: false,
       price: 28.5,
       description:
