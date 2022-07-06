@@ -7,8 +7,7 @@ module.exports = async () => {
   products.push(
     {
       name: "Arabica Coffee",
-      image:
-        "https://st.kofio.co/img_product/EC71GPY3S28pKOg/8840/7WgZxq28PeHk0fiIstvw_102215.png",
+      image: "product-images/1-1_brazilie.png",
       featured: true,
       price: 50.5,
       description:
@@ -18,8 +17,7 @@ module.exports = async () => {
     },
     {
       name: "Decaf Coffee",
-      image:
-        "https://cdn.discordapp.com/attachments/834507024796614656/989522756745953290/decaf.png",
+      image: "product-images/1-2_decaf.png",
       featured: true,
       price: 35.2,
       description:
@@ -29,8 +27,7 @@ module.exports = async () => {
     },
     {
       name: "Chroast - Bittersweet Symphony ",
-      image:
-        "https://st.kofio.co/img_product/rSKhlc8GLBmqPZ2/8463/o2za1xrJLYGb3i49VuRK_100426.png",
+      image: "product-images/1-3_chroast.png",
       featured: false,
       price: 28.2,
       description:
@@ -40,8 +37,7 @@ module.exports = async () => {
     },
     {
       name: "Ethiopian BirdSong Coffee",
-      image:
-        "https://st.kofio.co/img_product/CgFLhuwDtU8Pbsv/6244/sq_600_UiIc3j0Cg9eTAOmG2LuZ_253.png",
+      image: "product-images/1-4_ethiopian.png",
       featured: false,
       price: 23.2,
       description:
@@ -51,8 +47,7 @@ module.exports = async () => {
     },
     {
       name: "Brazil DaTerra",
-      image:
-        "https://st.kofio.co/img_product/wvPWgZyQNpUzKs9/8668/xEW0X4oRrgve5N93swqT_505.png",
+      image: "product-images/1-5_brazildaterra.png",
       featured: false,
       price: 18.5,
       description:
@@ -62,8 +57,7 @@ module.exports = async () => {
     },
     {
       name: "East Timor",
-      image:
-        "https://st.kofio.co/img_product/zXxuqvMKaNLmTf4/8983/VidTz7516UxXyApHnefc_9.png",
+      image: "product-images/1-6_east_timor.png",
       featured: false,
       price: 19.8,
       description:
@@ -73,8 +67,7 @@ module.exports = async () => {
     },
     {
       name: "Ethiopia Common Grounds",
-      image:
-        "https://st.kofio.co/img_product/sIrHcyXadRlOhGA/3564/sq_600_XR8MwsKA9hLGYaWgOdQx_100192.png",
+      image: "product-images/1-7_ethiopia_common_grounds.png",
       featured: false,
       price: 12.7,
       description:
@@ -84,8 +77,7 @@ module.exports = async () => {
     },
     {
       name: "Brazil Horizont",
-      image:
-        "https://st.kofio.co/img_product/6oTz9ULGdmM0DrF/6850/sq_600_ymkBhKWRagMt9DpYsifx_3.png",
+      image: "product-images/1-8_brazil_horizont.png",
       featured: false,
       price: 13.4,
       description:
@@ -95,8 +87,7 @@ module.exports = async () => {
     },
     {
       name: "Brazil Colombia Espresso Blend",
-      image:
-        "https://st.kofio.co/img_product/wvPWgZyQNpUzKs9/8221/sq_600_r1gtzIA0dY4HMca3R7QB_505.png",
+      image: "product-images/1-9_brazil_colombia.png",
       featured: false,
       price: 24.3,
       description:
@@ -106,8 +97,7 @@ module.exports = async () => {
     },
     {
       name: "Specialty coffee Mitte DR Congo KATANA",
-      image:
-        "https://st.kofio.co/img_product/rRwsYjp90ucdB7n/8945/PXKt1iUyRodx2JngrOSs_100885.png",
+      image: "product-images/1-10_specialty_mitte.png",
       featured: false,
       price: 18.5,
       description:
@@ -117,8 +107,7 @@ module.exports = async () => {
     },
     {
       name: "Kmen Coffee Roasters Burundi YANDARO",
-      image:
-        "https://st.kofio.co/img_product/YXQEU4u1AGjfnwJ/8534/sq_600_YqrVMes5ywgKFmE3Zc90_109439.png",
+      image: "product-images/1-11_kmen_burundi.png",
       featured: false,
       price: 17.5,
       description:
@@ -128,8 +117,7 @@ module.exports = async () => {
     },
     {
       name: "Nordbeans Colombia TUMBAGA - decaffeinated",
-      image:
-        "https://st.kofio.co/img_product/6oTz9ULGdmM0DrF/7434/sq_600_khEIGHbNKqsw9VoWUMe8_3.png",
+      image: "product-images/1-12_nordbeans_colombia.png",
       featured: false,
       price: 24.3,
       description:
@@ -139,8 +127,7 @@ module.exports = async () => {
     },
     {
       name: "Black Tea",
-      image:
-        "https://sinfonia.com.uy/wp-content/uploads/2016/10/Earl-Grey-Selection-Lata-con-Ingredientes-Te-Negro-Sinfonia.jpg",
+      image: "product-images/2-1_black_tea.jpg",
       featured: true,
       price: 25.2,
       description:
@@ -150,8 +137,7 @@ module.exports = async () => {
     },
     {
       name: "Green Tea",
-      image:
-        "https://sinfonia.com.uy/wp-content/uploads/2020/04/Jaipur-Composicion-Te-Verde-Sinfonia-1-1024x1024.jpg",
+      image: "product-images/2-2_green_tea.jpg",
       featured: true,
       price: 23.2,
       description:
@@ -161,8 +147,7 @@ module.exports = async () => {
     },
     {
       name: "Two blends selection with infuser",
-      image:
-        "https://sinfonia.com.uy/wp-content/uploads/2016/11/Seleccion-2-blends-Tubos-con-Infusor-Sinfonia-1.jpg",
+      image: "product-images/2-3_two_blends_infuser.jpg",
       featured: false,
       price: 17.5,
       description:
@@ -172,8 +157,7 @@ module.exports = async () => {
     },
     {
       name: "One blend selection",
-      image:
-        "https://sinfonia.com.uy/wp-content/uploads/2016/11/Pasion-Tango-Tubo-con-Ingredientes-Te-Negro-Sinfonia.jpg",
+      image: "product-images/2-4_one_blend.jpg",
       featured: false,
       price: 13.8,
       description:
@@ -183,8 +167,7 @@ module.exports = async () => {
     },
     {
       name: "Black Noel Tea",
-      image:
-        "https://sinfonia.com.uy/wp-content/uploads/2019/12/Noel-Lata-con-Ingredientes-Te-Negro-Sinfonia.jpg",
+      image: "product-images/2-5_black_noel.jpg",
       featured: false,
       price: 23.7,
       description:
@@ -194,8 +177,7 @@ module.exports = async () => {
     },
     {
       name: "White Lemon Tea",
-      image:
-        "https://sinfonia.com.uy/wp-content/uploads/2016/10/Limon-Oriental-Lata-con-Ingredientes-Te-Blanco-Sinfonia.jpg",
+      image: "product-images/2-6_white_lemon.jpg",
       featured: false,
       price: 23.7,
       description:
@@ -205,8 +187,7 @@ module.exports = async () => {
     },
     {
       name: "Orange sudafrican organic Tea",
-      image:
-        "https://sinfonia.com.uy/wp-content/uploads/2017/08/Naranja-Sudafricana-Lata-con-Ingredientes-Tisana-Sinfonia.jpg",
+      image: "product-images/2-7_orange_sudafrican.jpg",
       featured: false,
       price: 23.7,
       description:
@@ -216,8 +197,7 @@ module.exports = async () => {
     },
     {
       name: "One blend with infuser selection",
-      image:
-        "https://sinfonia.com.uy/wp-content/uploads/2016/11/Vals-de-Azahares-Tubo-con-Infusor-Te-Blanco-Sinfonia.jpg",
+      image: "product-images/2-8_one_blend_infuser.jpg",
       featured: false,
       price: 43.5,
       description:
@@ -227,8 +207,7 @@ module.exports = async () => {
     },
     {
       name: "Citrus fruit pack",
-      image:
-        "https://sinfonia.com.uy/wp-content/uploads/2021/03/Pack-Frutal-Citrico-Infusor-con-Lata-Six-y-Lata-Citrus-Te-Sinfonia.jpg",
+      image: "product-images/2-9_citrus_fruit_pack.jpg",
       featured: false,
       price: 43.5,
       description:
@@ -238,8 +217,7 @@ module.exports = async () => {
     },
     {
       name: "Chinese smoked black",
-      image:
-        "https://sinfonia.com.uy/wp-content/uploads/2018/11/Leyenda-Rusa-Lata-con-Ingredientes-Te-Negro-Sinfonia.jpg",
+      image: "product-images/2-10_chinese_smoked.jpg",
       featured: false,
       price: 38.5,
       description:
@@ -249,8 +227,7 @@ module.exports = async () => {
     },
     {
       name: "Organic green tea",
-      image:
-        "https://sinfonia.com.uy/wp-content/uploads/2020/08/Jazmin-de-Luna-Lata-con-Ingredientes-Te-Verde-Sinfonia.jpg",
+      image: "product-images/2-11_organic_green_tea.jpg",
       featured: false,
       price: 43.5,
       description:
@@ -260,8 +237,7 @@ module.exports = async () => {
     },
     {
       name: "Relaxing pack",
-      image:
-        "https://sinfonia.com.uy/wp-content/uploads/2020/04/T%C3%A9-Sinfon%C3%ADa-M%C3%B3nica-Devoto_Pack-Relax-01.jpg",
+      image: "product-images/2-12_relaxing_pack.jpg",
       featured: false,
       price: 43.5,
       description:
@@ -271,8 +247,7 @@ module.exports = async () => {
     },
     {
       name: "FrischSchoggi",
-      image:
-        "https://laderach.com/media/catalog/product/cache/0138abb1cd045ea962ef7970969ed197/1/0/10004708_02_1.jpg",
+      image: "product-images/3-1_laderach_truffles.webp",
       featured: false,
       price: 50.5,
       description:
@@ -282,8 +257,7 @@ module.exports = async () => {
     },
     {
       name: "Läderach truffles",
-      image:
-        "https://laderach.com/media/catalog/product/cache/0138abb1cd045ea962ef7970969ed197/1/0/10097017_T_S.png",
+      image: "product-images/3-2_frischschoggi_boat.webp",
       featured: false,
       price: 75.2,
       description:
@@ -293,8 +267,7 @@ module.exports = async () => {
     },
     {
       name: "FrischSchoggi™ boat big",
-      image:
-        "https://laderach.com/media/catalog/product/cache/0138abb1cd045ea962ef7970969ed197/1/0/10092577_T_S-min_1.jpg",
+      image: "product-images/3-2_frischschoggi_boat.webp",
       featured: false,
       price: 53.2,
       description:
@@ -304,8 +277,7 @@ module.exports = async () => {
     },
     {
       name: "FrischSchoggi™ pouch big",
-      image:
-        "https://laderach.com/media/catalog/product/cache/0138abb1cd045ea962ef7970969ed197/1/0/10092573_01-min.jpg",
+      image: "product-images/3-3_frischschoggi_pouch.webp",
       featured: true,
       price: 53.5,
       description:
@@ -315,8 +287,7 @@ module.exports = async () => {
     },
     {
       name: "FrischSchoggi™ Almond Dark",
-      image:
-        "https://laderach.com/media/catalog/product/cache/0138abb1cd045ea962ef7970969ed197/1/0/10004707_02_1.jpg",
+      image: "product-images/3-4_frischschoggi_almond_dark.webp",
       featured: false,
       price: 26.8,
       description:
@@ -326,8 +297,7 @@ module.exports = async () => {
     },
     {
       name: "Pralines assorted 11pcs heart box",
-      image:
-        "https://laderach.com/media/catalog/product/cache/0138abb1cd045ea962ef7970969ed197/1/0/10095587_01_1.jpg",
+      image: "product-images/3-5_pralines_heart_box.webp",
       featured: true,
       price: 28.9,
       description:
@@ -337,8 +307,7 @@ module.exports = async () => {
     },
     {
       name: "Truffles Classic with alcohol 18 pcs per box",
-      image:
-        "https://laderach.com/media/catalog/product/cache/0138abb1cd045ea962ef7970969ed197/1/0/10006263_01_T_S_3_1.jpg",
+      image: "product-images/3-6_truffles_classic_alcohol.webp",
       featured: false,
       price: 36.5,
       description:
@@ -348,8 +317,7 @@ module.exports = async () => {
     },
     {
       name: "FrischSchoggi™ pouch small",
-      image:
-        "https://laderach.com/media/catalog/product/cache/0138abb1cd045ea962ef7970969ed197/1/0/10092573_T_S-min_1.jpg",
+      image: "product-images/3-7_frischschoggi_pouch_small.webpg",
       featured: false,
       price: 28.5,
       description:
@@ -359,8 +327,7 @@ module.exports = async () => {
     },
     {
       name: "Pralines Classic Assorted 4 pcs per box",
-      image:
-        "https://laderach.com/media/catalog/product/cache/0138abb1cd045ea962ef7970969ed197/1/0/10097136_T_S.jpg",
+      image: "product-images/3-8_pralines_assorted_4perbox.webp",
       featured: false,
       price: 11.9,
       description:
@@ -370,8 +337,7 @@ module.exports = async () => {
     },
     {
       name: "FrischSchoggi™ Heart Hazelnut Milk",
-      image:
-        "https://laderach.com/media/catalog/product/cache/0138abb1cd045ea962ef7970969ed197/1/0/10004783_T_S_1.jpg",
+      image: "product-images/3-9_heart_hazelnut.webp",
       featured: false,
       price: 13.5,
       description:
@@ -381,8 +347,7 @@ module.exports = async () => {
     },
     {
       name: "FrischSchoggi™ Cranberry Milk",
-      image:
-        "https://laderach.com/media/catalog/product/cache/0138abb1cd045ea962ef7970969ed197/1/0/10004744_FrischSchoggi_Cranberry_Milch_f.jpg",
+      image: "product-images/3-10_cranberry.webp",
       featured: false,
       price: 21.3,
       description:
@@ -392,8 +357,7 @@ module.exports = async () => {
     },
     {
       name: "Pavés Grand Cru 8 pcs per box",
-      image:
-        "https://laderach.com/media/catalog/product/cache/0138abb1cd045ea962ef7970969ed197/1/0/10072293_01_1.jpg",
+      image: "product-images/3-11_paves.webp",
       featured: false,
       price: 11.9,
       description:
