@@ -220,6 +220,12 @@ const privateController = {
 
     res.json("OK");
   },
+  editedProduct: async (req, res) => {
+    const editedProduct = await Product.findOne({
+      where: { id: req.params.id },
+    });
+    res.json(editedProduct);
+  },
 };
 
 module.exports = privateController;

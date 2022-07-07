@@ -20,6 +20,7 @@ adminPrivateRouter.patch(
   "/update-product/:id",
   privateController.adminEditProduct
 );
+adminPrivateRouter.get("/edited-product/:id", privateController.editedProduct);
 
 // CRUD categories
 adminPrivateRouter.get("/categories", privateController.adminCategoriesView);
