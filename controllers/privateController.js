@@ -74,10 +74,9 @@ const privateController = {
   },
   adminEditProduct: async (req, res) => {
     const form = formidable({ multiples: true, keepExtensions: true });
-    // console.log("form");
-    // console.log(form);
+
     form.parse(req, async (err, fields, files) => {
-      console.log(files);
+      console.log(fields);
       const ext = path.extname(files.image.filepath);
       const newFileName = `image_${Date.now()}${ext}`;
       const { data, error } = await supabase.storage
@@ -192,11 +191,14 @@ const privateController = {
   },
 
   createOrder: async (req, res) => {
+    console.log("entre al rutaaaaa");
+    console.log(req.body);
     const newOrder = await Order.create({
       total: req.body.total,
       product: req.body.product,
       userId: req.body.userId,
     });
+
     res.json(newOrder);
   },
   userOrders: async (req, res) => {

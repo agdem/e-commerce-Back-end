@@ -14,6 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 routes(app);
+// dbInitialSetup();
 // Crea tablas e inserta datos de prueba.
 
 app.listen(APP_PORT, () => {
